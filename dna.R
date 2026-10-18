@@ -1,0 +1,7 @@
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("Biostrings")
+library(Biostrings)
+rosalind_dna= read_file("E:/rosalind_dna.txt")
+dna_string = DNAString(rosalind_dna_clean)
+letterFrequency(dna_string, letters = c("A", "C", "G", "T"))
